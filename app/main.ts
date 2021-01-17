@@ -18,7 +18,6 @@ import './phone-list/phone-list.module'
 import './core/phone/phone.module';
 
 import './core/checkmark/checkmark.filter';
-import './core/phone/phone.service';
 
 import './phone-detail/phone-detail.component'
 import './phone-list/phone-list.component'
