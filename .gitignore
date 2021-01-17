@@ -7,3 +7,4 @@ tmp
 .idea
 angular-phonecat-snapshots
 dist/*
+app/bundle.js
