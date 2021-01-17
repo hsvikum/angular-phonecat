@@ -52,8 +52,7 @@
     "postupdate-deps": "npm run copy-libs",
     "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist,jquery/dist}/**/*\" app/lib -C",
     "prestart": "npm install",
-    "start": "http-server ./app -a localhost -p 8000 -c-1",
-    "start-dist": "http-server ./dist/app -a localhost -p 8000 -c-1",
+    "start": "http-server ./ -a localhost -p 8000 -c-1",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
     "test-single-run": "npm test -- --single-run",
@@ -63,6 +62,6 @@
     "protractor": "protractor e2e-tests/protractor.conf.js",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "typescript-post-build-asset-copy": "copyfiles app/*.html dist --soft && copyfiles app/**/*.json dist --soft && copyfiles app/**/*.css dist --soft && copyfiles app/**/*.jpg dist --soft"
+    "typescript-post-build-asset-copy": "copyfiles app/**/*.html dist --soft && copyfiles app/**/*.json dist --soft && copyfiles app/**/*.css dist --soft && copyfiles app/**/*.jpg dist --soft"
   }
 }
