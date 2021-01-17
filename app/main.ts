@@ -8,7 +8,7 @@ import 'core-js';
 import 'zone.js';
 
 
-import './app.module';
+import './app.module.ajs';
 import './app.config';
 import './app.animations';
 
@@ -22,3 +22,8 @@ import './core/phone/phone.service';
 
 import './phone-detail/phone-detail.component'
 import './phone-list/phone-list.component'
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
