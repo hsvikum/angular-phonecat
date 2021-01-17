@@ -2,8 +2,13 @@
 
 angular.
   module('phonecatApp').
-  config(['$routeProvider',
-    function config($routeProvider) {
+  config(['$routeProvider', '$locationProvider',
+    function config(
+      $routeProvider: angular.route.IRouteProvider,
+      $locationProvider: angular.ILocationProvider
+    ) {
+
+      $locationProvider.hashPrefix('!');
       $routeProvider.
         when('/phones', {
           template: '<phone-list></phone-list>'
