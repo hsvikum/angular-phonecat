@@ -1,14 +1,15 @@
-'use strict';
+declare var angular: angular.IAngularStatic;
+import { Phone, PhoneData } from '../core/phone/phone.service';
 
-// Register `phoneList` component, along with its associated controller and template
 class PhoneListController {
-  phones: any[];
+  phones: PhoneData[];
   orderProp: string;
-  query: string | undefined;
 
-  static $inject = ['Phone'];
-  constructor(Phone: any) {
-    this.phones = Phone.query();
+  static $inject = ['phone'];
+  constructor(phone: Phone) {
+    phone.query().subscribe(phones => {
+      this.phones = phones;
+    });
     this.orderProp = 'age';
   }
 }
