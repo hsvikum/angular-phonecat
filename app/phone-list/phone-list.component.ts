@@ -4,7 +4,7 @@
 class PhoneListController {
   phones: any[];
   orderProp: string;
-  // query: string;
+  query: string | undefined;
 
   static $inject = ['Phone'];
   constructor(Phone: any) {
